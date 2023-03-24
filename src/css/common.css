@@ -1,18 +1,138 @@
+/* Загальні стилі */
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #fafafa;
-  color: #212121;
+  font-size: 1rem;
   line-height: 1.5;
+  color: #333;
+  padding: 30px;
+  transition: background-color 0.250s ease-in-out;
 }
 
-img {
-  display: block;
-  max-width: 100%;
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+button {
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #0074d9;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #005fad;
+}
+
+/* Стилі для таймера */
+.timer {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.timer .field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 1.5rem;
+}
+
+.timer .field:last-of-type {
+  margin-right: 0;
+}
+
+.timer .value {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+  transition: all 0.3s ease-in-out;
+}
+
+.timer .label {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #aaa;
+}
+
+/* Стилі для введення дати і кнопки "Start" */
+#datetime-picker {
+  padding: 0.5rem;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-right: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+#datetime-picker:focus {
+  border-color: #0074d9;
+}
+
+#datetime-picker::placeholder {
+  color: #aaa;
+}
+
+button[type="submit"],
+[data-start] {
+  background-color: #2ecc71;
+}
+
+[data-start]:hover {
+  background-color: #27ae60;
+}
+
+button[type="submit"]:hover {
+  background-color: #27ae60;
+}
+
+[data-start]:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+/* Стилі для form промісів */
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: 32px 0;
+  align-items: center;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+input[type="number"] {
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin-top: 8px;
+}
+
+button[type="submit"] {
+  align-self: center;
+  width: 200px;
 }
